@@ -1,0 +1,19 @@
+<h1>List of all directors</h1>
+
+<table border="1">
+<% @list_of_directors.each do |entry| %>
+  <tr>
+    <td> <%= entry.id %> </td>
+      <td> 
+        <img src="http://robohash.org/<%=entry.name%>">
+      </td>
+    <td> <%= entry.name %> </td>
+    <td> <%= entry.dob %> </td>
+    <td> 
+      <a href="/directors/<%=entry.id%>">
+      Show details
+      </a>
+    </td>
+  </tr>
+<% end %>
+</table>
